@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>intro</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .first {
+            display: block;
+        }
+
+        .chatHeader {
+            background-color: aqua;
+            position: relative;
+        }
+
+        .addButton {
+            float: right;
+            background-color: aqua;
+
+            position: absolute;
+            height: 100%;
+            right: 0;
+
+        }
+
+        .row {
+            display: flex;
+
+        }
+
+        .tr {
+            border: none;
+        }
+
+        .table {
+            border: solid 1px;
+        }
+
+        .second {
+            display: none
+        }
+
+        .labelName {
+            opacity: 0.5;
+            border: solid 1px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first">
+        <div class=" container-fluid">
+            <h1 class="chatHeader">Chat Groups
+                <button class="addButton" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fa fa-plus icon"></i>
+                    Add new group
+                </button>
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-4">
+                <h3>Groups</h3>
+                <table class="table  ">
+                    <tbody>
+                        <tr class="tr">
+                            <th><i class="fa fa-users"></i></th>
+                            <th>Family</th>
+                            <th><i class="fa fa-times"></i></th>
+                        </tr>
+                        <tr>
+                            <th><i class="fa fa-users"></i></th>
+                            <th>Friends</th>
+                            <th><i class="fa fa-times"></i></th>
+                        </tr>
+                        <tr>
+                            <th><i class="fa fa-users"></i></th>
+                            <th>Just smile</th>
+                            <th><i class="fa fa-times"></i></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-4 ">
+                <h3>User in group</h3>
+                <table class=" table">
+                    <tbody>
+                        <tr>
+                            <th><i class="fa fa-user"></i></th>
+                            <th>john Koli</th>
+                        </tr>
+                        <tr>
+                            <th><i class="fa fa-user"></i></th>
+                            <th>Stephan Koli</th>
+                        </tr>
+                        <tr>
+                            <th><i class="fa fa-user"></i></th>
+                            <th>Moris Dor</th>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+
+    <div class="second">
+        <div class=" container-fluid">
+            <h1 class="chatHeader">
+                <i class="fa fa-angle-left" id="return" onclick="Next()"></i>
+                Create Group
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-3">
+                <h3>Users</h3>
+                <table class="table  ">
+                    <tbody>
+                        <tr class="tr">
+
+                            <th>Dov Hoz</th>
+                            <th><i class="fa fa-plus-circle"></i></th>
+                        </tr>
+                        <tr>
+
+                            <th>Menachem Begild</th>
+                            <th><i class="fa fa-plus-circle"></i></th>
+                        </tr>
+                        <tr>
+
+                            <th>Aron Dov</th>
+                            <th><i class="fa fa-plus-circle"></i></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-2">
+                <label class="labelName">group name</label>
+            </div>
+            <div class="col-sm-3 ">
+                <h3>User in group</h3>
+                <table class=" table">
+                    <tbody>
+                        <tr>
+                            <th>john Koli</th>
+                            <th><i class="fa fa-times-circle"></i></th>
+                        </tr>
+                        <tr>
+                            <th>Stephan Koli</th>
+                            <th><i class="fa fa-times-circle"></i></th>
+                        </tr>
+                        <tr>
+                            <th>Moris Dor</th>
+                            <th><i class="fa fa-times-circle"></i></th>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title" id="exampleModalLabel">add new group</h5>
+                </div>
+                <div class="modal-body">
+                    <h4>add new group</h4>
+                    <span class="fa-stack" style="vertical-align: top;">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-camera-retro fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <input placeholder="groupName">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">add group</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
