@@ -48,17 +48,21 @@
         }
 
         .labelName {
-            opacity: 0.5;
+
             border: solid 1px
+        }
+
+        .icon {
+            font-size: x-large;
         }
     </style>
 </head>
 
 <body>
-    <div class="first">
+    <div class="first" id="firstScreen">
         <div class=" container-fluid">
             <h1 class="chatHeader">Chat Groups
-                <button class="addButton" data-toggle="modal" data-target="#exampleModal">
+                <button class="addButton" data-toggle="modal" data-target="#groupModal">
                     <i class="fa fa-plus icon"></i>
                     Add new group
                 </button>
@@ -112,10 +116,10 @@
         </div>
     </div>
 
-    <div class="second">
+    <div class="second" id="secondScreen">
         <div class=" container-fluid">
             <h1 class="chatHeader">
-                <i class="fa fa-angle-left" id="return" onclick="Next()"></i>
+                <i class="fa fa-angle-left" id="return" onclick="myFunction()"></i>
                 Create Group
             </h1>
         </div>
@@ -128,17 +132,17 @@
                         <tr class="tr">
 
                             <th>Dov Hoz</th>
-                            <th><i class="fa fa-plus-circle"></i></th>
+                            <th><i class="fa fa-plus-circle icon"></i></th>
                         </tr>
                         <tr>
 
                             <th>Menachem Begild</th>
-                            <th><i class="fa fa-plus-circle"></i></th>
+                            <th><i class="fa fa-plus-circle icon"></i></th>
                         </tr>
                         <tr>
 
                             <th>Aron Dov</th>
-                            <th><i class="fa fa-plus-circle"></i></th>
+                            <th><i class="fa fa-plus-circle icon"></i></th>
                         </tr>
                     </tbody>
                 </table>
@@ -152,15 +156,15 @@
                     <tbody>
                         <tr>
                             <th>john Koli</th>
-                            <th><i class="fa fa-times-circle"></i></th>
+                            <th><i class="fa fa-times-circle icon"></i></th>
                         </tr>
                         <tr>
                             <th>Stephan Koli</th>
-                            <th><i class="fa fa-times-circle"></i></th>
+                            <th><i class="fa fa-times-circle icon"></i></th>
                         </tr>
                         <tr>
                             <th>Moris Dor</th>
-                            <th><i class="fa fa-times-circle"></i></th>
+                            <th><i class="fa fa-times-circle icon"></i></th>
                         </tr>
                     </tbody>
 
@@ -169,7 +173,7 @@
             <div class="col-sm-2"></div>
         </div>
     </div>
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="groupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -189,7 +193,9 @@
                     <input placeholder="groupName">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">add group</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="myFunction()">
+                        add group
+                    </button>
 
                 </div>
             </div>
